@@ -1,4 +1,4 @@
-<?php
+<?php namespace Infobip\OneAPI;
 
 /** Generic object to be used for API methods that return without body. */
 class GenericObject extends AbstractObject {
@@ -10,4 +10,3 @@ class GenericObject extends AbstractObject {
 }
 
 Models::register('GenericObject');
-?>

@@ -1,4 +1,4 @@
-<?php
+<?php namespace Infobip\OneAPI;
 
 class SmsMessageSubscription extends AbstractObject {
 
@@ -9,6 +9,3 @@ class SmsMessageSubscription extends AbstractObject {
 }
 
 Models::register('SmsMessageSubscription');
-
-
-?>

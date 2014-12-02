@@ -1,4 +1,4 @@
-<?php
+<?php namespace Infobip\OneAPI;
 
 /**
  * Description of Encodings
@@ -19,7 +19,3 @@ Models::register(
         'Encodings',
         new ObjectArrayConversionRule('Encoding', 'encodings')
 );
-        
-
-
-?>

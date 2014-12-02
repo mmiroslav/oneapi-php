@@ -1,4 +1,4 @@
-<?php
+<?php namespace Infobip\OneAPI;
 
 class Language {
     public $languageCode;
@@ -16,6 +16,3 @@ class Language {
 
 }
 Models::register('Language');
-
-
-?>

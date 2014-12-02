@@ -1,4 +1,4 @@
-<?php
+<?php namespace Infobip\OneAPI;
 
 class CustomerProfile extends AbstractObject {
 
@@ -27,5 +27,3 @@ class CustomerProfile extends AbstractObject {
 }
 	
 Models::register('CustomerProfile');	
-
-?>

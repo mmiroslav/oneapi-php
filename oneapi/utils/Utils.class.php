@@ -1,12 +1,12 @@
-<?php
+<?php namespace Infobip\OneAPI;
 
 class Utils {
 
     static function randomString($length, $chars) {
         if(!$length || $length <= 0)
-            throw new Exception('Invalid random string length:'.$length);
+            throw new \Exception('Invalid random string length:'.$length);
         if(!$chars)
-            throw new Exception('Invalid random string chars:'.$chars);
+            throw new \Exception('Invalid random string chars:'.$chars);
 
         $result = '';
         for($i = 0; $i < $length; $i++)
@@ -72,7 +72,11 @@ class Utils {
         // kraj
         $ptr = $val;
         return true;
-    }        
-}
+    }
 
-?>
+    static function shortClassName($classname) {
+        $classNameParts = explode('\\', $classname);
+        return $classNameParts[count($classNameParts) - 1];
+    }
+
+}

@@ -1,4 +1,4 @@
-<?php
+<?php namespace Infobip\OneAPI;
 
 class MoSubscription extends AbstractObject {
 
@@ -19,5 +19,3 @@ class MoSubscription extends AbstractObject {
 }
 
 Models::register('MoSubscription');
-
-?>

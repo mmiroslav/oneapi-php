@@ -1,4 +1,4 @@
-<?php
+<?php namespace Infobip\OneAPI;
 
 class TerminalRoamingStatus extends AbstractObject {
 
@@ -23,4 +23,3 @@ Models::register(
                 new SubObjectConversionRule('TerminalRoamingExtendedData', 'extendedData'),
         )
 );
-

@@ -1,4 +1,4 @@
-<?php
+<?php namespace Infobip\OneAPI;
 
 
 class Captcha  extends AbstractObject {
@@ -15,5 +15,3 @@ class Captcha  extends AbstractObject {
 }    
 Models::register('Captcha');
 
-
-?>

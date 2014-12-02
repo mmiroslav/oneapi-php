@@ -1,4 +1,4 @@
-<?php
+<?php namespace Infobip\OneAPI;
 
 // TODO: Remove this object and use only TerminalRoamingStatus !
 class TerminalRoamingStatusList extends AbstractObject {
@@ -15,4 +15,3 @@ Models::register(
         'TerminalRoamingStatusList',
         new SubObjectConversionRule('TerminalRoamingStatus', 'terminalRoamingStatus', 'terminalRoamingStatusList.roaming')
 );
-

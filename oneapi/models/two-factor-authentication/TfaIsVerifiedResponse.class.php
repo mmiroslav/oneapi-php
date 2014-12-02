@@ -1,4 +1,4 @@
-<?php
+<?php namespace Infobip\OneAPI;
 
 class TfaIsVerifiedResponse extends AbstractObject {
 
@@ -12,5 +12,3 @@ class TfaIsVerifiedResponse extends AbstractObject {
 }
 
 Models::register('TfaIsVerifiedResponse');
-
-?>

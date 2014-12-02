@@ -1,4 +1,4 @@
-<?php
+<?php namespace Infobip\OneAPI;
 
 class IamException extends AbstractObject {
 
@@ -13,5 +13,3 @@ class IamException extends AbstractObject {
 Models::register('IamException', array (
   new SubObjectConversionRule('IamRequestError', 'requestError')
 ));
-
-?>

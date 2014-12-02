@@ -1,4 +1,4 @@
-<?php
+<?php namespace Infobip\OneAPI;
 
 class Countries extends AbstractObject {
 
@@ -15,4 +15,3 @@ Models::register(
         new ObjectArrayConversionRule('Country', 'countries')
 );
 
-?>

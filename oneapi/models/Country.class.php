@@ -1,4 +1,4 @@
-<?php
+<?php namespace Infobip\OneAPI;
 
 class Country  extends AbstractObject {
     public $id;
@@ -13,6 +13,3 @@ class Country  extends AbstractObject {
 
 }    
 Models::register('Country');
-
-
-?>

@@ -1,4 +1,4 @@
-<?php
+<?php namespace Infobip\OneAPI;
 
 // require_once('SISendMessageResult');
 
@@ -19,5 +19,3 @@ class SISendSmsResponse extends AbstractObject {
 Models::register('SISendSmsResponse', array (
   new ObjectArrayConversionRule('SISendMessageResult', 'responses')
 ));
-
-?>

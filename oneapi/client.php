@@ -1,21 +1,25 @@
-<?php
+<?php namespace Infobip\OneAPI;
 
 define('__ONEAPI_LIBRARY_PATH__', dirname(__FILE__) . DIRECTORY_SEPARATOR . '..' . DIRECTORY_SEPARATOR);
 
 function __oneapi_autoloader($class) {
-    $paths = array('oneapi/models', 'oneapi/models/iam', 'oneapi/models/two-factor-authentication', 'oneapi/core', 'oneapi/utils');
+    $classNameParts = explode('\\', $class);
+    $class = $classNameParts[(count($classNameParts) - 1)];
+
+    $paths = array('oneapi/models', 'oneapi/models/iam', 'oneapi/models/two-factor-authentication', 'oneapi/core', 'oneapi/Utils');
     foreach($paths as $path) {
         $fileName = __ONEAPI_LIBRARY_PATH__ . $path . '/' . $class . '.class.php';
-        if(is_file($fileName))
+        if(is_file($fileName)) {
             require_once $fileName;
+        }
     }
 }
-
-spl_autoload_register('__oneapi_autoloader');
+spl_autoload_register(__NAMESPACE__ . '\__oneapi_autoloader');
 
 //require_once 'yapd/dbg.php';
 
 require_once __ONEAPI_LIBRARY_PATH__ . 'oneapi/object.php';
+
 
 // Check that curl is defined:
 if(!function_exists('curl_init')) {
@@ -277,7 +281,7 @@ class AbstractOneApiClient {
         $code = curl_getinfo($ch, CURLINFO_HTTP_CODE);
 
         if(curl_errno($ch) != 0)
-            throw new Exception(curl_error($ch));
+            throw new \Exception(curl_error($ch));
 
         $isSuccess = 200 <= $code && $code < 300;
 
@@ -334,12 +338,12 @@ class AbstractOneApiClient {
 
         if ($this->throwException && !$result->isSuccess()) {
             $message = $result->exception->messageId . ': ' . $result->exception->text . ' [' . implode(',', $result->exception->variables) . ']';
-            throw new Exception($message);
+            throw new \Exception($message);
         }
 
         if ('IamException' == $className) {
             $message = json_encode($result->requestError);
-            throw new Exception($message);
+            throw new \Exception($message);
         }
 
         return $result;
@@ -720,6 +724,7 @@ class CustomerProfileClient extends AbstractOneApiClient {
                 )
         );
         if(!$isSuccess) {
+            // TODO: SMSAuthentication... where is this?
             return new SmsAuthentication($content, $isSuccess);
         } else {
             $this->oneApiAuthentication->verified = true;
@@ -875,7 +880,7 @@ class SocialInviteClient extends AbstractOneApiClient {
             $temp = explode(',', $socialInviteRequest->recipients);
             unset($socialInviteRequest->recipients);
             for ($i = 0; $i < count($temp); $i++) {
-                $socialInviteRequest->recipients->destinations[$i] = new stdClass();
+                $socialInviteRequest->recipients->destinations[$i] = new \stdClass();
                 $socialInviteRequest->recipients->destinations[$i]->address = $temp[$i];
             }
         }

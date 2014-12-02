@@ -1,4 +1,4 @@
-<?php
+<?php namespace Infobip\OneAPI;
 
 // Example:
 // {"deliveryReceiptSubscription":{"callbackReference":{"callbackData":null,"notifyURL":"http://192.168.10.111/save_requests"},"resourceURL":"http://oneapi.infobip.com/1/smsmessaging/outbound/subscriptions/q1id6ksfc8"}}

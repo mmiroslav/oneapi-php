@@ -1,4 +1,4 @@
-<?php
+<?php namespace Infobip\OneAPI;
 
 class InboundSmsMessages extends AbstractObject {
 
@@ -31,4 +31,3 @@ Models::register(
         new ObjectConversionRule('__convert_inbound_sms_messages')
 );
 
-?>

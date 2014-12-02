@@ -1,4 +1,4 @@
-<?
+<?php namespace Infobip\OneAPI;
 
 class DeliveryInfoNotification extends AbstractObject {
 
@@ -19,4 +19,3 @@ Models::register(
         )
 );
 
-?>

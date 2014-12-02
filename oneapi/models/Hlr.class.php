@@ -1,4 +1,4 @@
-<?php
+<?php namespace Infobip\OneAPI;
 
 class Hlr extends AbstractObject {
 
@@ -12,5 +12,3 @@ class Hlr extends AbstractObject {
 
 }    
 Models::register('Hlr');
-
-?>

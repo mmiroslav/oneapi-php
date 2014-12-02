@@ -1,4 +1,4 @@
-<?php
+<?php namespace Infobip\OneAPI;
 
 /**
  * SMS request object.
@@ -41,5 +41,3 @@ class SMSRequest extends AbstractObject
 }
 
 Models::register('SMSRequest');
-
-?>

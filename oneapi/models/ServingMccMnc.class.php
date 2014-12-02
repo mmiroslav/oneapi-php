@@ -1,4 +1,4 @@
-<?php
+<?php namespace Infobip\OneAPI;
 
 class ServingMccMnc extends AbstractObject {
 
@@ -12,4 +12,3 @@ class ServingMccMnc extends AbstractObject {
 }
 
 Models::register('ServingMccMnc');
-

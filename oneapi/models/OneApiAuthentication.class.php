@@ -1,4 +1,4 @@
-<?php
+<?php namespace Infobip\OneAPI;
 
 /**
  * Every client has a instance of this class that contains the basic 
@@ -49,5 +49,3 @@ Models::register(
     'OneApiAuthentication',
     new ObjectConversionRule('__convert_ib_auth_from_json')
 );
-
-?>

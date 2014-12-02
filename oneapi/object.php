@@ -1,4 +1,5 @@
 <?php
+namespace Infobip\OneAPI;
 
 /** JSON <-> model conversion utilities */
 class Conversions {
@@ -6,9 +7,10 @@ class Conversions {
     /** Create new model instance from JSON. */
     public static function createFromJSON($className, $json, $isError=false) {
         if(!$className) {
-            throw new Exception('Invalid className:'.$className);
+            throw new \Exception('Invalid className:'.$className);
         }
-        $model = new $className();
+        $className = __NAMESPACE__ . '\\' . $className;
+        $model = new  $className();
         self::fillFromJSON($model, $json, $isError);
         return $model;
     }
@@ -109,12 +111,12 @@ class FieldConversionRule {
     }
 
     public function convertFromJSON($value) {
-        $function = $this->fromJSON;
+        $function = __NAMESPACE__ . '\\' . $this->fromJSON;
         return $function($value);
     }
 
     public function convertToJSON($value) {
-        $function = $this->toJSON;
+        $function = __NAMESPACE__ . '\\' . $this->toJSON;
         return $function($value);
     }
 
@@ -131,13 +133,13 @@ class ObjectConversionRule {
     }
 
     public function convertFromJson($object, $json) {
-        $function = $this->fromJSON;
+        $function = __NAMESPACE__ . '\\' . $this->fromJSON;
         $function($object, $json);
     }
 
     public function convertToJson($object, $json)
     {
-        $function = $this->toJSON;
+        $function = __NAMESPACE__ . '\\' . $this->toJSON;
         if (is_callable($function)) {
             $function($object, $json);
         } else {
@@ -294,10 +296,11 @@ class Models {
     }
 
     public static function getConversionRules($className) {
+        $className = Utils::shortClassName($className);
         $className = strtolower($className);
         if(!array_key_exists($className, self::$conversions)) {
             Logs::debug('Registered models:', array_keys(self::$conversions));
-            throw new Exception('Unregistered model:'. $className);
+            throw new \Exception('Unregistered model:'. $className);
         }
         return self::$conversions[$className];
     }

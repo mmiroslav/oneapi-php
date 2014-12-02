@@ -1,4 +1,4 @@
-<?php
+<?php namespace Infobip\OneAPI;
 
 class MoSubscriptions extends AbstractObject {
 
@@ -14,5 +14,3 @@ Models::register(
         'MoSubscriptions',
         new ObjectArrayConversionRule('MoSubscription', 'subscriptions')
 );
-
-?>

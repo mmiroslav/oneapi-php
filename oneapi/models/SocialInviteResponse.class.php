@@ -1,4 +1,4 @@
-<?php
+<?php namespace Infobip\OneAPI;
 
 // require_once('SISendSmsResponse');
 
@@ -17,5 +17,3 @@ class SocialInviteResponse extends AbstractObject {
 Models::register('SocialInviteResponse', array (
   new SubObjectConversionRule('SISendSmsResponse', 'sendSmsResponse')
 ));
-
-?>

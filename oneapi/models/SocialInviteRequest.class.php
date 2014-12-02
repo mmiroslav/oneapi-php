@@ -1,4 +1,4 @@
-<?php
+<?php namespace Infobip\OneAPI;
 
 /**
  * Social Invite request object.
@@ -18,5 +18,3 @@ class SocialInviteRequest extends AbstractObject {
 }
 
 Models::register('SocialInviteRequest');
-
-?>

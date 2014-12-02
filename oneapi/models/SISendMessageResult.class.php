@@ -1,4 +1,4 @@
-<?php
+<?php namespace Infobip\OneAPI;
 
 /**
  * Send message response (Social Invite) object.
@@ -15,5 +15,3 @@ class SISendMessageResult extends AbstractObject {
 }
 
 Models::register('SISendMessageResult');
-
-?>

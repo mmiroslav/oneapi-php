@@ -1,4 +1,4 @@
-<?php
+<?php namespace Infobip\OneAPI;
 
 class Timezone extends AbstractObject {
     public $id;
@@ -16,4 +16,3 @@ class Timezone extends AbstractObject {
 }    
 Models::register('Timezone');
 
-?>

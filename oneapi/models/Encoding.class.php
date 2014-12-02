@@ -1,4 +1,4 @@
-<?php
+<?php namespace Infobip\OneAPI;
 
 
 class Encoding  extends AbstractObject {
@@ -10,6 +10,3 @@ class Encoding  extends AbstractObject {
 
 }    
 Models::register('Encoding');
-
-
-?>

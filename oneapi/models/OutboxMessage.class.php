@@ -1,4 +1,4 @@
-<?php
+<?php namespace Infobip\OneAPI;
 
 class OutboxMessage extends AbstractObject {
 
@@ -21,5 +21,3 @@ class OutboxMessage extends AbstractObject {
 }
 
 Models::register('OutboxMessage');
-
-?>

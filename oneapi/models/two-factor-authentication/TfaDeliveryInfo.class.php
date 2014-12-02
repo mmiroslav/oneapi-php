@@ -1,4 +1,4 @@
-<?php
+<?php namespace Infobip\OneAPI;
 
 class TfaDeliveryInfo extends AbstractObject {
 
@@ -13,5 +13,3 @@ class TfaDeliveryInfo extends AbstractObject {
 }
 
 Models::register('TfaDeliveryInfo');
-
-?>

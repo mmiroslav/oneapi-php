@@ -1,4 +1,4 @@
-<?php
+<?php namespace Infobip\OneAPI;
 
 class Logs {
 
@@ -25,7 +25,7 @@ class Logs {
 					$result .= '' . $arg;
 				}
 			}
-			catch( Exception $e ) {
+			catch( \Exception $e ) {
 				$result .= '[Can\'t convert arg to string]';
 			}
 		}
@@ -106,4 +106,3 @@ class Logs {
 	}
 
 }
-?>

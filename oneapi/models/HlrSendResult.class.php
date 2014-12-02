@@ -1,4 +1,4 @@
-<?php
+<?php namespace Infobip\OneAPI;
 
 class HlrSendResult extends AbstractObject {
 
@@ -13,5 +13,3 @@ class HlrSendResult extends AbstractObject {
 }
 
 Models::register('HlrSendResult');
-
-?>

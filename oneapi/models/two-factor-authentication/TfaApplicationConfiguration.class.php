@@ -1,4 +1,4 @@
-<?php
+<?php namespace Infobip\OneAPI;
 
 class TfaApplicationConfiguration extends AbstractObject {
 
@@ -24,5 +24,3 @@ class TfaApplicationConfiguration extends AbstractObject {
 }
 
 Models::register('TfaApplicationConfiguration');
-
-?>

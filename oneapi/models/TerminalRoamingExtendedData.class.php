@@ -1,4 +1,4 @@
-<?php
+<?php namespace Infobip\OneAPI;
 
 class TerminalRoamingExtendedData extends AbstractObject {
 

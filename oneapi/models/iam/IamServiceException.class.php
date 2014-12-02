@@ -1,4 +1,4 @@
-<?php
+<?php namespace Infobip\OneAPI;
 
 class IamServiceException extends AbstractObject {
 
@@ -13,5 +13,3 @@ class IamServiceException extends AbstractObject {
 }
 
 Models::register('IamServiceException');
-
-?>

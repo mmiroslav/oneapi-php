@@ -1,4 +1,4 @@
-<?
+<?php namespace Infobip\OneAPI;
 
 
 class TerminalRoamingStatusNotification extends AbstractObject {
@@ -19,5 +19,3 @@ Models::register(
             new SubFieldConversionRule('callbackData', 'terminalRoamingStatusList.roaming.callbackData')
         )
 );
-
-?>

@@ -1,4 +1,4 @@
-<?php
+<?php namespace Infobip\OneAPI;
 
 /**
  * Resulting object on message (HLR/LBS) send.
@@ -21,5 +21,3 @@ Models::register(
     'ResourceReference',
     new SubscriptionIdFieldConversionRule('clientCorrelator', 'resourceReference.resourceURL')
 );
-
-?>

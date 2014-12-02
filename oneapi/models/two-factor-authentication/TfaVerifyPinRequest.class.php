@@ -1,4 +1,4 @@
-<?php
+<?php namespace Infobip\OneAPI;
 
 class TfaVerifyPinRequest extends AbstractObject {
 
@@ -13,5 +13,3 @@ class TfaVerifyPinRequest extends AbstractObject {
 }
 
 Models::register('TfaVerifyPinRequest');
-
-?>
