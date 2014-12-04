@@ -11,9 +11,7 @@
     "minimum-stability": "dev",
     "require": {},
     "autoload": {
-        "classmap": {
-            "Infobip\\OneAPI": ["oneapi/", "oneapi/models", "oneapi/Utils", "oneapi/models/iam", "oneapi/models/two-factor-authentication"]
-        }
+        "classmap": ["oneapi/", "oneapi/models", "oneapi/Utils", "oneapi/models/iam", "oneapi/models/two-factor-authentication"]
     }
 }
 	
