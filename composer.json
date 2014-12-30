@@ -1,5 +1,5 @@
 {
-    "name": "infobip/oneapi",
+    "name": "infobip/oal",
     "version": "2.0.1",
     "license": "Apache-2.0",
     "description": "Infobip OneAPI library for PHP",
